@@ -8,7 +8,7 @@ module OscillatorTop (
   input  wire          io_clk_25,
   input  wire          io_reset,
   // input  wire [23:0]   io_freqWord,
-  input  wire [2:0]    io_waveSelect,
+  // input  wire [2:0]    io_waveSelect,
   // input  wire [7:0]    io_pwmWidth,
   output wire          io_i2s_bclk,
   output wire          io_i2s_lrclk,
@@ -27,7 +27,8 @@ module OscillatorTop (
 
   // Assign input as constants
   wire [23:0] io_freqWord   = 24'h003C13;
-  wire [7:0] io_pwmWidth   = 8'h40;
+  wire [2:0]  io_waveSelect = 3'b000;
+  wire [7:0]  io_pwmWidth   = 8'h40;
   assign mclk = 1'b0;
 
   // 25MHz (io_clk_25) to 24MHz (io_clk) with the instance of pll.v
