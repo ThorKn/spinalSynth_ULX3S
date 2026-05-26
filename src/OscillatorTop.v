@@ -7,12 +7,13 @@
 module OscillatorTop (
   input  wire          io_clk_25,
   input  wire          io_reset,
-  input  wire [23:0]   io_freqWord,
-  input  wire [2:0]    io_waveSelect,
-  input  wire [7:0]    io_pwmWidth,
+  // input  wire [23:0]   io_freqWord,
+  // input  wire [2:0]    io_waveSelect,
+  // input  wire [7:0]    io_pwmWidth,
   output wire          io_i2s_bclk,
   output wire          io_i2s_lrclk,
-  output wire          io_i2s_sdata
+  output wire          io_i2s_sdata,
+  output wire          mclk
 );
 
   wire                core_timingGen_io_phaseTick;
@@ -24,13 +25,26 @@ module OscillatorTop (
   wire                core_transmitter_io_lrclk;
   wire                core_transmitter_io_sdata;
 
+  // Assign input as constants
+  wire [23:0] io_freqWord   = 24'h003C13;
+  wire [2:0]  io_waveSelect = 3'b000;
+  wire [7:0]  io_pwmWidth   = 8'h40;
+  assign mclk = 1'b0;
+
   // 25MHz (io_clk_25) to 24MHz (io_clk) with the instance of pll.v
+  wire       io_clk_100;
   wire       io_clk;
-  wire       locked_pll;
-  pll pll_inst (
+  wire       locked_pll1;
+  wire       locked_pll2;
+  pll1 pll_inst1 (
     .clkin(io_clk_25),
+    .clkout0(io_clk_100),
+    .locked(locked_pll1)
+  );
+  pll2 pll_inst2 (
+    .clkin(io_clk_100),
     .clkout0(io_clk),
-    .locked(locked_pll)
+    .locked(locked_pll2)
   );
 
   TimingGenerator core_timingGen (
