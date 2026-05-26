@@ -1,8 +1,8 @@
-TOPMOD  := OscillatorTop
-TOPMOD2 := OscillatorTop
+TOPMOD  := SpinalSynth
+TOPMOD2 := SpinalSynth
 CHIP := 85k
 PACKAGE := CABGA381
-CONSTRAINTS := ulx3s_v20_i2s_test
+CONSTRAINTS := ulx3s_v20
 VLOGFIL := $(TOPMOD).v
 
 .PHONY: all
@@ -26,6 +26,6 @@ $(TOPMOD).config: $(TOPMOD).json
 		--textcfg $(TOPMOD).config
 
 $(TOPMOD).json: $(TOPMOD).v
-	yosys -l $(TOPMOD)_yosys.log -p "synth_ecp5 -top $(TOPMOD2) -json $(TOPMOD).json" $(TOPMOD).v pll_1.v pll_2.v
+	yosys -l $(TOPMOD)_yosys.log -p "synth_ecp5 -top $(TOPMOD2) -json $(TOPMOD).json" $(TOPMOD).v UartTop.v pll_1.v pll_2.v
 
 
