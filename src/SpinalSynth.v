@@ -32,7 +32,7 @@ module SpinalSynth (
     .locked(locked_pll2)
   );
 
-  UartTop core_uartTop (
+  Synth core_Synth (
     .io_clk24MHz  (io_clk),       //i
     .io_reset     (io_reset),     //i 
     .io_uartRx    (io_uartRx),    //i
