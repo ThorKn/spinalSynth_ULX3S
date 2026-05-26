@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.14.0    git head : 95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde
 // Component : UartTop
-// Git hash  : 96316d61b099c8a4e1597b3d965af58b020deb4e
+// Git hash  : f28e5246e47621897928c8e4246981628e554546
 
 `timescale 1ns/1ps
 
@@ -783,13 +783,15 @@ module Generators (
   output wire [15:0]   io_triWave
 );
 
+  wire       [9:0]    _zz_expandedPwm;
   wire       [23:0]   expandedPwm;
   reg        [22:0]   triReflected;
   wire                when_Generators_l34;
 
+  assign _zz_expandedPwm = ({2'd0,io_pwmWidth} <<< 2'd2);
   assign io_sawWave = (io_phase[23 : 8] ^ 16'h8000);
   assign io_squareWave = (io_phase[23] ? 16'h7fff : 16'h8000);
-  assign expandedPwm = ({16'd0,io_pwmWidth} <<< 5'd16);
+  assign expandedPwm = {14'd0, _zz_expandedPwm};
   assign io_pwmWave = ((io_phase < expandedPwm) ? 16'h7fff : 16'h8000);
   assign when_Generators_l34 = (io_phase[23] == 1'b0);
   always @(*) begin

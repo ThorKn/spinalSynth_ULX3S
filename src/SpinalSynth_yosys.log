@@ -372,8 +372,8 @@ Removed 17 unused modules.
 Cleaned up 0 empty switches.
 
 5.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$UartTop.v:820$302 in module Accumulator.
-Marked 1 switch rules as full_case in process $proc$UartTop.v:797$299 in module Generators.
+Marked 1 switch rules as full_case in process $proc$UartTop.v:818$302 in module Accumulator.
+Marked 1 switch rules as full_case in process $proc$UartTop.v:795$299 in module Generators.
 Marked 1 switch rules as full_case in process $proc$UartTop.v:764$292 in module Noise.
 Marked 1 switch rules as full_case in process $proc$UartTop.v:726$290 in module Mux.
 Marked 1 switch rules as full_case in process $proc$UartTop.v:698$289 in module TimingGenerator.
@@ -394,7 +394,7 @@ Promoted 10 assignments to connections.
 5.5.4. Executing PROC_INIT pass (extract init attributes).
 
 5.5.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \io_reset in `\Accumulator.$proc$UartTop.v:820$302'.
+Found async reset \io_reset in `\Accumulator.$proc$UartTop.v:818$302'.
 Found async reset \io_reset in `\Noise.$proc$UartTop.v:764$292'.
 Found async reset \io_reset in `\TimingGenerator.$proc$UartTop.v:698$289'.
 Found async reset \io_reset in `\Decimator.$proc$UartTop.v:553$276'.
@@ -408,9 +408,9 @@ Converted 0 switches.
 <suppressed ~29 debug messages>
 
 5.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\Accumulator.$proc$UartTop.v:820$302'.
+Creating decoders for process `\Accumulator.$proc$UartTop.v:818$302'.
      1/1: $0\phaseReg[23:0]
-Creating decoders for process `\Generators.$proc$UartTop.v:797$299'.
+Creating decoders for process `\Generators.$proc$UartTop.v:795$299'.
      1/1: $1\triReflected[22:0]
 Creating decoders for process `\Noise.$proc$UartTop.v:764$292'.
      1/1: $0\lfsr[22:0]
@@ -472,7 +472,7 @@ Creating decoders for process `\RegisterBank.$proc$UartTop.v:136$226'.
     10/10: $0\freqLowReg[7:0]
 
 5.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\Generators.\triReflected' from process `\Generators.$proc$UartTop.v:797$299'.
+No latch inferred for signal `\Generators.\triReflected' from process `\Generators.$proc$UartTop.v:795$299'.
 No latch inferred for signal `\Mux.\io_sample' from process `\Mux.$proc$UartTop.v:726$290'.
 No latch inferred for signal `\TimingGenerator.\sampleCounter_valueNext' from process `\TimingGenerator.$proc$UartTop.v:685$287'.
 No latch inferred for signal `\TimingGenerator.\sampleCounter_willIncrement' from process `\TimingGenerator.$proc$UartTop.v:681$284'.
@@ -481,7 +481,7 @@ No latch inferred for signal `\TimingGenerator.\phaseCounter_willIncrement' from
 No latch inferred for signal `\I2STransmitter.\_zz_cycleCounter_1' from process `\I2STransmitter.$proc$UartTop.v:472$259'.
 
 5.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\Accumulator.\phaseReg' using process `\Accumulator.$proc$UartTop.v:820$302'.
+Creating register for signal `\Accumulator.\phaseReg' using process `\Accumulator.$proc$UartTop.v:818$302'.
   created $adff cell `$procdff$545' with positive edge clock and positive level reset.
 Creating register for signal `\Noise.\lfsr' using process `\Noise.$proc$UartTop.v:764$292'.
   created $adff cell `$procdff$548' with positive edge clock and positive level reset.
@@ -559,10 +559,10 @@ Creating register for signal `\RegisterBank.\oscVolumeReg' using process `\Regis
 5.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 1 empty switch in `\Accumulator.$proc$UartTop.v:820$302'.
-Removing empty process `Accumulator.$proc$UartTop.v:820$302'.
-Found and cleaned up 1 empty switch in `\Generators.$proc$UartTop.v:797$299'.
-Removing empty process `Generators.$proc$UartTop.v:797$299'.
+Found and cleaned up 1 empty switch in `\Accumulator.$proc$UartTop.v:818$302'.
+Removing empty process `Accumulator.$proc$UartTop.v:818$302'.
+Found and cleaned up 1 empty switch in `\Generators.$proc$UartTop.v:795$299'.
+Removing empty process `Generators.$proc$UartTop.v:795$299'.
 Found and cleaned up 1 empty switch in `\Noise.$proc$UartTop.v:764$292'.
 Removing empty process `Noise.$proc$UartTop.v:764$292'.
 Found and cleaned up 1 empty switch in `\Mux.$proc$UartTop.v:726$290'.
@@ -982,7 +982,7 @@ Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCor
 Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$procdff$578 ($adff) from module SpinalSynth (D = $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$0\patternIndex[2:0], Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.transmitter.patternIndex).
 Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$procdff$572 ($adff) from module SpinalSynth (D = $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$0\shiftReg[15:0], Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.transmitter.shiftReg).
 Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\decimator_1.$procdff$563 ($adff) from module SpinalSynth (D = \core_uartTop.core_oscillatorWrapper.oscillatorCore.decimator_1.io_sampleIn, Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.decimator_1.sampleReg).
-Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$procdff$545 ($adff) from module SpinalSynth (D = $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:825$303_Y, Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.accumulator_1.phaseReg).
+Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$procdff$545 ($adff) from module SpinalSynth (D = $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:823$303_Y, Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.accumulator_1.phaseReg).
 Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\noise_1.$procdff$548 ($adff) from module SpinalSynth (D = { \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.noise_1.lfsr [21:0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.noise_1.feedback }, Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.noise_1.lfsr).
 Adding EN signal on $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$procdff$575 ($adff) from module SpinalSynth (D = $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$0\cycleCounter[4:0], Q = \core_uartTop.core_oscillatorWrapper.oscillatorCore.transmitter.cycleCounter).
 Adding EN signal on $flatten\core_uartTop.\core_registerBank.$procdff$626 ($adff) from module SpinalSynth (D = \core_uartTop.core_protocolDecoder.writeDataReg, Q = \core_uartTop.core_registerBank.freqLowReg).
@@ -1082,7 +1082,6 @@ Removed top 4 bits (of 5) from port B of cell SpinalSynth.$flatten\core_uartTop.
 Removed top 4 bits (of 5) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$sub$UartTop.v:528$275 ($sub).
 Removed top 1 bits (of 3) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$procmux$377_CMP0 ($eq).
 Removed top 2 bits (of 3) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$procmux$378_CMP0 ($eq).
-Removed top 14 bits (of 24) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$lt$UartTop.v:795$296 ($lt).
 Removed top 2 bits (of 3) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\mux_1.$procmux$316_CMP0 ($eq).
 Removed top 1 bits (of 3) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\mux_1.$procmux$315_CMP0 ($eq).
 Removed top 1 bits (of 3) from port B of cell SpinalSynth.$flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\mux_1.$procmux$314_CMP0 ($eq).
@@ -1153,7 +1152,7 @@ Extracting $alu and $macc cells in module SpinalSynth:
   creating $macc model for $flatten\core_uartTop.\core_uartRxModule.$add$UartTop.v:351$255 ($add).
   creating $macc model for $flatten\core_uartTop.\core_uartRxModule.$neg$UartTop.v:346$252 ($neg).
   creating $macc model for $flatten\core_uartTop.\core_uartRxModule.$add$UartTop.v:367$257 ($add).
-  creating $macc model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:825$303 ($add).
+  creating $macc model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:823$303 ($add).
   creating $macc model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\timingGen.$add$UartTop.v:689$288 ($add).
   creating $macc model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\timingGen.$add$UartTop.v:673$283 ($add).
   creating $macc model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$sub$UartTop.v:528$275 ($sub).
@@ -1166,20 +1165,20 @@ Extracting $alu and $macc cells in module SpinalSynth:
   creating $alu model for $macc $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$sub$UartTop.v:528$275.
   creating $alu model for $macc $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\timingGen.$add$UartTop.v:673$283.
   creating $alu model for $macc $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\timingGen.$add$UartTop.v:689$288.
-  creating $alu model for $macc $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:825$303.
+  creating $alu model for $macc $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:823$303.
   creating $alu model for $macc $flatten\core_uartTop.\core_uartRxModule.$add$UartTop.v:367$257.
   creating $alu model for $macc $flatten\core_uartTop.\core_uartRxModule.$neg$UartTop.v:346$252.
   creating $alu model for $macc $flatten\core_uartTop.\core_uartRxModule.$add$UartTop.v:351$255.
-  creating $alu model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$lt$UartTop.v:795$296 ($lt): new $alu
+  creating $alu model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$lt$UartTop.v:793$296 ($lt): new $alu
   creating $alu model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$le$UartTop.v:498$269 ($le): new $alu
   creating $alu model for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$le$UartTop.v:497$266 ($le): new $alu
   creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$le$UartTop.v:497$266: $auto$alumacc.cc:512:replace_alu$860
   creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$le$UartTop.v:498$269: $auto$alumacc.cc:512:replace_alu$869
-  creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$lt$UartTop.v:795$296: $auto$alumacc.cc:512:replace_alu$878
+  creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$lt$UartTop.v:793$296: $auto$alumacc.cc:512:replace_alu$878
   creating $alu cell for $flatten\core_uartTop.\core_uartRxModule.$add$UartTop.v:351$255: $auto$alumacc.cc:512:replace_alu$883
   creating $alu cell for $flatten\core_uartTop.\core_uartRxModule.$neg$UartTop.v:346$252: $auto$alumacc.cc:512:replace_alu$886
   creating $alu cell for $flatten\core_uartTop.\core_uartRxModule.$add$UartTop.v:367$257: $auto$alumacc.cc:512:replace_alu$889
-  creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:825$303: $auto$alumacc.cc:512:replace_alu$892
+  creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\accumulator_1.$add$UartTop.v:823$303: $auto$alumacc.cc:512:replace_alu$892
   creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\timingGen.$add$UartTop.v:689$288: $auto$alumacc.cc:512:replace_alu$895
   creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\timingGen.$add$UartTop.v:673$283: $auto$alumacc.cc:512:replace_alu$898
   creating $alu cell for $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\transmitter.$sub$UartTop.v:528$275: $auto$alumacc.cc:512:replace_alu$901
@@ -1311,11 +1310,11 @@ No more expansions possible.
 
 5.30.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module SpinalSynth.
-<suppressed ~21 debug messages>
+<suppressed ~22 debug messages>
 
 5.30.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\SpinalSynth'.
-Computing hashes of 188 cells of `\SpinalSynth'.
+Computing hashes of 202 cells of `\SpinalSynth'.
 Finding duplicate cells in `\SpinalSynth'.
 Removed a total of 0 cells.
 
@@ -1323,8 +1322,8 @@ Removed a total of 0 cells.
 
 5.30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \SpinalSynth..
-Removed 2 unused cells and 11 unused wires.
-<suppressed ~3 debug messages>
+Removed 16 unused cells and 25 unused wires.
+<suppressed ~17 debug messages>
 
 5.30.5. Finished fast OPT passes.
 
@@ -1351,11 +1350,11 @@ Removed 0 multiplexer ports.
 
 5.32.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \SpinalSynth.
-    Consolidated identical input bits for $mux cell $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$ternary$UartTop.v:793$295:
+    Consolidated identical input bits for $mux cell $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$ternary$UartTop.v:791$294:
       Old ports: A=16'1000000000000000, B=16'0111111111111111, Y=\core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave
       New ports: A=2'10, B=2'01, Y={ \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [15] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] }
       New connections: \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [14:1] = { \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_squareWave [0] }
-    Consolidated identical input bits for $mux cell $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$ternary$UartTop.v:795$297:
+    Consolidated identical input bits for $mux cell $flatten\core_uartTop.\core_oscillatorWrapper.\oscillatorCore.\oscillator_1.\generators_1.$ternary$UartTop.v:793$297:
       Old ports: A=16'0111111111111111, B=16'1000000000000000, Y=\core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave
       New ports: A=2'01, B=2'10, Y={ \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [15] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] }
       New connections: \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [14:1] = { \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] \core_uartTop.core_oscillatorWrapper.oscillatorCore.oscillator_1.mux_1.io_pwmWave [0] }
@@ -1456,7 +1455,7 @@ Using template $paramod$53700bbee849b2010ad0b60a61ccd204a10e24ca\_80_ccu2c_alu f
 Using template $paramod$e82d3fc1811c5751348a3964470632b35a435fc7\_80_ccu2c_alu for cells of type $alu.
 Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_80_ccu2c_alu for cells of type $alu.
 Using template $paramod$025d767fc934a3e7d59a671de523743ebaa07759\_90_alu for cells of type $alu.
-Using template $paramod$88a4b55ab239e71fa727ed06c86f5e6b24a54f95\_80_ccu2c_alu for cells of type $alu.
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_80_ccu2c_alu for cells of type $alu.
 Using extmapper simplemap for cells of type $reduce_or.
 Using extmapper simplemap for cells of type $reduce_and.
 Using extmapper simplemap for cells of type $not.
@@ -1502,31 +1501,31 @@ Using extmapper simplemap for cells of type $pos.
 Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
 Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
 No more expansions possible.
-<suppressed ~631 debug messages>
+<suppressed ~603 debug messages>
 
 5.34. Executing OPT pass (performing simple optimizations).
 
 5.34.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module SpinalSynth.
-<suppressed ~671 debug messages>
+<suppressed ~608 debug messages>
 
 5.34.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\SpinalSynth'.
-Computing hashes of 1225 cells of `\SpinalSynth'.
+Computing hashes of 1197 cells of `\SpinalSynth'.
 Finding duplicate cells in `\SpinalSynth'.
-Computing hashes of 1110 cells of `\SpinalSynth'.
+Computing hashes of 1096 cells of `\SpinalSynth'.
 Finding duplicate cells in `\SpinalSynth'.
-Computing hashes of 1090 cells of `\SpinalSynth'.
+Computing hashes of 1076 cells of `\SpinalSynth'.
 Finding duplicate cells in `\SpinalSynth'.
-<suppressed ~405 debug messages>
-Removed a total of 135 cells.
+<suppressed ~363 debug messages>
+Removed a total of 121 cells.
 
 5.34.3. Executing OPT_DFF pass (perform DFF optimizations).
 
 5.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \SpinalSynth..
-Removed 179 unused cells and 794 unused wires.
-<suppressed ~181 debug messages>
+Removed 172 unused cells and 753 unused wires.
+<suppressed ~174 debug messages>
 
 5.34.5. Finished fast OPT passes.
 
@@ -1537,7 +1536,7 @@ Finding unused cells or wires in module \SpinalSynth..
 
 5.37. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\SpinalSynth'.
-Computing hashes of 911 cells of `\SpinalSynth'.
+Computing hashes of 904 cells of `\SpinalSynth'.
 Finding duplicate cells in `\SpinalSynth'.
 Removed a total of 0 cells.
 
@@ -1664,7 +1663,7 @@ No more expansions possible.
 Cleaned up 0 empty switches.
 
 5.45.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3948 in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3850 in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
 Removed a total of 0 dead cases.
 
 5.45.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -1672,33 +1671,33 @@ Removed 0 redundant assignments.
 Promoted 1 assignment to connection.
 
 5.45.3.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3949'.
+Found init rule in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3851'.
   Set init value: \Q = 1'0
 
 5.45.3.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \muxlsr in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3948'.
+Found async reset \muxlsr in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3850'.
 
 5.45.3.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~1 debug messages>
 
 5.45.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3949'.
-Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3948'.
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3851'.
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3850'.
      1/1: $0\Q[0:0]
 
 5.45.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 5.45.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.\Q' using process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3948'.
-  created $adff cell `$procdff$3954' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.\Q' using process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3850'.
+  created $adff cell `$procdff$3856' with positive edge clock and positive level reset.
 
 5.45.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.45.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3949'.
-Found and cleaned up 1 empty switch in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3948'.
-Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3948'.
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3851'.
+Found and cleaned up 1 empty switch in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3850'.
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3850'.
 Cleaned up 1 empty switch.
 
 5.45.4. Executing PROC pass (convert processes to netlists).
@@ -1707,7 +1706,7 @@ Cleaned up 1 empty switch.
 Cleaned up 0 empty switches.
 
 5.45.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3962 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3864 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
 Removed a total of 0 dead cases.
 
 5.45.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -1715,33 +1714,33 @@ Removed 0 redundant assignments.
 Promoted 1 assignment to connection.
 
 5.45.4.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3963'.
+Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3865'.
   Set init value: \Q = 1'0
 
 5.45.4.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3962'.
+Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3864'.
 
 5.45.4.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~1 debug messages>
 
 5.45.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3963'.
-Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3962'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3865'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3864'.
      1/1: $0\Q[0:0]
 
 5.45.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 5.45.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3962'.
-  created $adff cell `$procdff$3968' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3864'.
+  created $adff cell `$procdff$3870' with positive edge clock and positive level reset.
 
 5.45.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.45.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3963'.
-Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3962'.
-Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3962'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3865'.
+Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3864'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3864'.
 Cleaned up 1 empty switch.
 
 5.45.5. Executing PROC pass (convert processes to netlists).
@@ -1750,7 +1749,7 @@ Cleaned up 1 empty switch.
 Cleaned up 0 empty switches.
 
 5.45.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3976 in module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3878 in module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
 Removed a total of 0 dead cases.
 
 5.45.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -1758,33 +1757,33 @@ Removed 0 redundant assignments.
 Promoted 1 assignment to connection.
 
 5.45.5.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3977'.
+Found init rule in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3879'.
   Set init value: \Q = 1'1
 
 5.45.5.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \muxlsr in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3976'.
+Found async reset \muxlsr in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3878'.
 
 5.45.5.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~1 debug messages>
 
 5.45.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3977'.
-Creating decoders for process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3976'.
+Creating decoders for process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3879'.
+Creating decoders for process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3878'.
      1/1: $0\Q[0:0]
 
 5.45.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 5.45.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.\Q' using process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3976'.
-  created $adff cell `$procdff$3982' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.\Q' using process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3878'.
+  created $adff cell `$procdff$3884' with positive edge clock and positive level reset.
 
 5.45.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.45.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3977'.
-Found and cleaned up 1 empty switch in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3976'.
-Removing empty process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3976'.
+Removing empty process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3879'.
+Found and cleaned up 1 empty switch in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3878'.
+Removing empty process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3878'.
 Cleaned up 1 empty switch.
 
 5.45.6. Executing PROC pass (convert processes to netlists).
@@ -1793,7 +1792,7 @@ Cleaned up 1 empty switch.
 Cleaned up 0 empty switches.
 
 5.45.6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$4000 in module $paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3902 in module $paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.
 Removed a total of 0 dead cases.
 
 5.45.6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -1801,33 +1800,33 @@ Removed 0 redundant assignments.
 Promoted 1 assignment to connection.
 
 5.45.6.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$4001'.
+Found init rule in `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3903'.
   Set init value: \Q = 1'1
 
 5.45.6.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \muxlsr in `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$4000'.
+Found async reset \muxlsr in `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3902'.
 
 5.45.6.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~1 debug messages>
 
 5.45.6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$4001'.
-Creating decoders for process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$4000'.
+Creating decoders for process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3903'.
+Creating decoders for process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3902'.
      1/1: $0\Q[0:0]
 
 5.45.6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 5.45.6.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.\Q' using process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$4000'.
-  created $adff cell `$procdff$4006' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.\Q' using process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3902'.
+  created $adff cell `$procdff$3908' with positive edge clock and positive level reset.
 
 5.45.6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.45.6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$4001'.
-Found and cleaned up 1 empty switch in `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$4000'.
-Removing empty process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$4000'.
+Removing empty process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:278$3903'.
+Found and cleaned up 1 empty switch in `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3902'.
+Removing empty process `$paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF.$proc$/home/moss/installs/EDA/oss-cad-suite/lib/../share/yosys/lattice/common_sim.vh:282$3902'.
 Cleaned up 1 empty switch.
 
 5.45.7. Executing SCC pass (detecting logic loops).
@@ -2103,7 +2102,7 @@ Module SpinalSynth: replaced 18 cells with 120 new cells, skipped 39 cells.
       31 $specify2
 
 5.45.19. Executing AIGMAP pass (map logic to AIG).
-Module SpinalSynth: replaced 359 cells with 1943 new cells, skipped 810 cells.
+Module SpinalSynth: replaced 359 cells with 1943 new cells, skipped 803 cells.
   replaced 3 cell types:
      162 $_MUX_
      190 $_OR_
@@ -2116,7 +2115,7 @@ Module SpinalSynth: replaced 359 cells with 1943 new cells, skipped 810 cells.
      190 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF
       61 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF
        5 $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF
-      48 $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C
+      41 $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C
        2 $paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF
      190 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp
       61 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp
@@ -2129,7 +2128,7 @@ Module SpinalSynth: replaced 359 cells with 1943 new cells, skipped 810 cells.
 
 5.45.19.3. Executing XAIGER backend.
 <suppressed ~11 debug messages>
-Extracted 817 AND gates and 2990 wires from module `SpinalSynth' to a netlist network with 263 inputs and 243 outputs.
+Extracted 817 AND gates and 2969 wires from module `SpinalSynth' to a netlist network with 263 inputs and 243 outputs.
 
 5.45.19.4. Executing ABC9_EXE pass (technology mapping using ABC9).
 
@@ -2140,42 +2139,42 @@ ABC: + read_lut <abc-temp-dir>/input.lut
 ABC: + read_box <abc-temp-dir>/input.box 
 ABC: + &read <abc-temp-dir>/input.xaig 
 ABC: + &ps 
-ABC: <abc-temp-dir>/input : i/o =    263/    243  and =     589  lev =    8 (0.53)  mem = 0.04 MB  box = 306  bb = 258
+ABC: <abc-temp-dir>/input : i/o =    263/    243  and =     589  lev =    8 (0.56)  mem = 0.03 MB  box = 299  bb = 258
 ABC: + &scorr 
 ABC: Warning: The network is combinational.
 ABC: + &sweep 
 ABC: + &dc2 
 ABC: + &dch -f -r 
 ABC: + &ps 
-ABC: <abc-temp-dir>/input : i/o =    263/    243  and =     727  lev =    7 (0.40)  mem = 0.04 MB  ch =  108  box = 302  bb = 258
-ABC: cst =       0  cls =    106  lit =     108  unused =    1166  proof =     0
+ABC: <abc-temp-dir>/input : i/o =    263/    243  and =     712  lev =    7 (0.42)  mem = 0.04 MB  ch =   99  box = 295  bb = 258
+ABC: cst =       0  cls =     97  lit =      99  unused =    1148  proof =     0
 ABC: + &if -W 300 -v 
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   64. Obj =  148. Set =  672. CutMin = no
-ABC: Node =     727.  Ch =   106.  Total mem =    0.40 MB. Peak cut mem =    0.02 MB.
-ABC: P:  Del = 1634.00.  Ar =     561.0.  Edge =      698.  Cut =     8597.  T =     0.00 sec
-ABC: P:  Del = 1634.00.  Ar =     561.0.  Edge =      699.  Cut =     8534.  T =     0.00 sec
-ABC: P:  Del = 1634.00.  Ar =     495.0.  Edge =      676.  Cut =    10498.  T =     0.00 sec
-ABC: F:  Del = 1634.00.  Ar =     360.0.  Edge =      691.  Cut =     8976.  T =     0.00 sec
-ABC: A:  Del = 1634.00.  Ar =     358.0.  Edge =      670.  Cut =     7349.  T =     0.00 sec
-ABC: A:  Del = 1634.00.  Ar =     357.0.  Edge =      670.  Cut =     7302.  T =     0.00 sec
+ABC: Node =     712.  Ch =    97.  Total mem =    0.38 MB. Peak cut mem =    0.02 MB.
+ABC: P:  Del = 1605.00.  Ar =     551.0.  Edge =      693.  Cut =     8437.  T =     0.00 sec
+ABC: P:  Del = 1605.00.  Ar =     551.0.  Edge =      694.  Cut =     8403.  T =     0.00 sec
+ABC: P:  Del = 1605.00.  Ar =     496.0.  Edge =      666.  Cut =    10247.  T =     0.00 sec
+ABC: F:  Del = 1605.00.  Ar =     376.0.  Edge =      666.  Cut =     9511.  T =     0.00 sec
+ABC: A:  Del = 1605.00.  Ar =     372.0.  Edge =      641.  Cut =     8537.  T =     0.00 sec
+ABC: A:  Del = 1605.00.  Ar =     371.0.  Edge =      639.  Cut =     8591.  T =     0.00 sec
 ABC: Total time =     0.01 sec
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + &mfs 
 ABC: + &ps -l 
-ABC: <abc-temp-dir>/input : i/o =    263/    243  and =     668  lev =    8 (0.42)  mem = 0.04 MB  box = 300  bb = 258
-ABC: Mapping (K=7)  :  lut =    158  edge =     665  lev =    3 (0.18)  levB =   13  mem = 0.01 MB
-ABC: LUT = 158 : 2=28 17.7 %  3=27 17.1 %  4=30 19.0 %  5=49 31.0 %  6=5 3.2 %  7=19 12.0 %  Ave = 4.21
+ABC: <abc-temp-dir>/input : i/o =    263/    243  and =     679  lev =    8 (0.45)  mem = 0.03 MB  box = 293  bb = 258
+ABC: Mapping (K=7)  :  lut =    155  edge =     634  lev =    3 (0.18)  levB =   13  mem = 0.01 MB
+ABC: LUT = 155 : 2=40 25.8 %  3=28 18.1 %  4=20 12.9 %  5=31 20.0 %  6=17 11.0 %  7=19 12.3 %  Ave = 4.09
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + time 
-ABC: elapse: 0.06 seconds, total: 0.06 seconds
+ABC: elapse: 0.04 seconds, total: 0.04 seconds
 
 5.45.19.6. Executing AIGER frontend.
 <suppressed ~1030 debug messages>
-Removed 924 unused cells and 2783 unused wires.
+Removed 969 unused cells and 2744 unused wires.
 
 5.45.19.7. Executing ABC9_OPS pass (helper functions for ABC9).
-ABC RESULTS:              $lut cells:      160
-ABC RESULTS:   $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C cells:       42
+ABC RESULTS:              $lut cells:      157
+ABC RESULTS:   $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C cells:       35
 ABC RESULTS:   $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp cells:      190
 ABC RESULTS:   $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp cells:       61
 ABC RESULTS:   $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp cells:        5
@@ -2203,8 +2202,8 @@ Using template $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF for 
 Using template $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp for cells of type $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp.
 Using template $paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF_$abc9_byp for cells of type $paramod$af6cfab7b64a03625b4e26db341709ec2a848ad1\TRELLIS_FF_$abc9_byp.
 No more expansions possible.
-<suppressed ~572 debug messages>
-Removed 46 unused cells and 8417 unused wires.
+<suppressed ~565 debug messages>
+Removed 47 unused cells and 8333 unused wires.
 
 5.46. Executing TECHMAP pass (map to technology primitives).
 
@@ -2283,250 +2282,242 @@ Generating RTLIL representation for module `$lut'.
 Successfully finished Verilog frontend.
 
 5.46.2. Continuing TECHMAP pass.
-Using template $paramod$7fbbe26328640df11a92b71229330243ce2cea7e$lut for cells of type $lut.
 Using template $paramod$9d97d87b86d3f588730de47fd9f36e9d70f98a88$lut for cells of type $lut.
-Using template $paramod$c28a8b7ce0535d090c4cfb52e9c74affd52b110c$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
-Using template $paramod$c78b28b0674e1f0605658e28384d11f25f372de7$lut for cells of type $lut.
+Using template $paramod$a09b08e9092089f78097ed5551926a1da48d64c9$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
 Using template $paramod$7063b73d2b6c93bb083df35119bbbfeaca1098ac$lut for cells of type $lut.
+Using template $paramod$7b77e270c6b8063f69549d2688563c61cd9968f6$lut for cells of type $lut.
 Using template $paramod$7c3cf6ceffafa401ddb983f26bcf8cf3a5fcfd43$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10110011 for cells of type $lut.
+Using template $paramod$baa88887c4630803f83ac99e16ebe1294bd45a7a$lut for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1101 for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
-Using template $paramod$507a2a372a6e003d4d949a6f61d5e2bf633425ee$lut for cells of type $lut.
-Using template $paramod$364c9ffbffac467d60dfec81bba4e18476c15602$lut for cells of type $lut.
-Using template $paramod$8726cf3e672f19eb3eb01bc98eb237eceea60446$lut for cells of type $lut.
-Using template $paramod$235bf6c3a906b45d8cff974742061ca715e7e8bd$lut for cells of type $lut.
-Using template $paramod$40ded33cbfc6581bdfc426ef3bc93728d337225b$lut for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11101111 for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11011001 for cells of type $lut.
+Using template $paramod$7bb6a37e65823eeb4b38c370fec30ab082759a14$lut for cells of type $lut.
+Using template $paramod$addad55bacfe07a9ba36101c4755d6c38ea1f2d2$lut for cells of type $lut.
+Using template $paramod$47a8214374025465e226fa66bee690ff33268a25$lut for cells of type $lut.
+Using template $paramod$91db0975b66e20b17c0828237dd3204ed43202dd$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$507a2a372a6e003d4d949a6f61d5e2bf633425ee$lut for cells of type $lut.
+Using template $paramod$235bf6c3a906b45d8cff974742061ca715e7e8bd$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11101100 for cells of type $lut.
+Using template $paramod$40ded33cbfc6581bdfc426ef3bc93728d337225b$lut for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
-Using template $paramod$5348912da867a611a8088b6b8b27a62d65f1de6e$lut for cells of type $lut.
-Using template $paramod$9fb24f0bae471aa23bf5bf8220d6be7b6fa77a67$lut for cells of type $lut.
-Using template $paramod$cef619f9c4be5de8bc8fdedc6c469963869c667b$lut for cells of type $lut.
-Using template $paramod$41a9017c3cf386202f51048036dec79f710305a2$lut for cells of type $lut.
-Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b$lut for cells of type $lut.
-Using template $paramod$6e238df02989b317f10820a22773676e71120644$lut for cells of type $lut.
-Using template $paramod$0328e568d609989242dcb98a1c5328d4372a6e9c$lut for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8$lut for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
-Using template $paramod$0ace52034c7f9e1681506a60dfd427fd0314e79a$lut for cells of type $lut.
-Using template $paramod$b12c06dcea4e94212d81ae51560e40391ac83400$lut for cells of type $lut.
+Using template $paramod$0328e568d609989242dcb98a1c5328d4372a6e9c$lut for cells of type $lut.
 Using template $paramod$b09178ebfdd9aec77ff7ffcac1a4f6a0069a762f$lut for cells of type $lut.
-Using template $paramod$b004ca966af57b747db0679fdfd461f27f02eb4b$lut for cells of type $lut.
-Using template $paramod$c1e4179198d86bbaf8ac5c0cd5967e4052e49ffe$lut for cells of type $lut.
-Using template $paramod$0b0b7c84ba964af088b1f1f51f1b57b520f2a483$lut for cells of type $lut.
+Using template $paramod$0fcb06ed76df01e8d45bc2b9e6c8a9b43fa42cb4$lut for cells of type $lut.
+Using template $paramod$5647d3e7c615de0c752d17594fb88f6edd483bd3$lut for cells of type $lut.
+Using template $paramod$c20e3e49943d81c32f342d9fd06ee2acc9f90598$lut for cells of type $lut.
+Using template $paramod$364c9ffbffac467d60dfec81bba4e18476c15602$lut for cells of type $lut.
+Using template $paramod$d9ebadbb5dd83d134c7a583c3690b0388735e5f6$lut for cells of type $lut.
 Using template $paramod$b80e608920ce9cfa1f5c7d21df7a72954e9b0a70$lut for cells of type $lut.
-Using template $paramod$e627bd0d6eced6be7b7b10e64aa249762ad31fbb$lut for cells of type $lut.
-Using template $paramod$f479a354c2773c31cffb6ef2adbffa518654a929$lut for cells of type $lut.
-Using template $paramod$a2843ccf08856731c05466630b90e570e5cc9fbd$lut for cells of type $lut.
 Using template $paramod$e51a8a571bee774247b38f52d6e85fd62ae52cea$lut for cells of type $lut.
 Using template $paramod$6b0849254d6c87461fb93e37cc18f089f61eb912$lut for cells of type $lut.
-Using template $paramod$97108e3cc0d0482a6e72e932e86430aa2177750b$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001010 for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00100000 for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
-Using template $paramod$c20e3e49943d81c32f342d9fd06ee2acc9f90598$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10110000 for cells of type $lut.
-Using template $paramod$77c2a0573790d304ab2299da6d598e8d2e184867$lut for cells of type $lut.
-Using template $paramod$5ce0414f30742591cfbc3ba73903b522793ddcd1$lut for cells of type $lut.
-Using template $paramod$054039f284ea4a3cc41a3eae71d574662bc3dd9a$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001000 for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101000 for cells of type $lut.
-Using template $paramod$3b5b4efb8d3620dcbbb946e7e54e0ff6f460dd44$lut for cells of type $lut.
-Using template $paramod$f5d1c5d5f77f45ffe17befc28ba399e703b6f0a5$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00101000 for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010100 for cells of type $lut.
+Using template $paramod$7f5908313c59c3ce1333589800ad6d1247eedcd8$lut for cells of type $lut.
 Using template $paramod$719e363290efeb6e8bcd848dd400dc9c0a0bab24$lut for cells of type $lut.
-Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9$lut for cells of type $lut.
+Using template $paramod$f15473266b10e0b86171452712262a24ad462b6b$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001000 for cells of type $lut.
+Using template $paramod$3b5b4efb8d3620dcbbb946e7e54e0ff6f460dd44$lut for cells of type $lut.
+Using template $paramod$e627bd0d6eced6be7b7b10e64aa249762ad31fbb$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$939f75808e60357e481866d39eabfb5a652995a8$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$a2843ccf08856731c05466630b90e570e5cc9fbd$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10110000 for cells of type $lut.
+Using template $paramod$0b0b7c84ba964af088b1f1f51f1b57b520f2a483$lut for cells of type $lut.
+Using template $paramod$f5d1c5d5f77f45ffe17befc28ba399e703b6f0a5$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001010 for cells of type $lut.
+Using template $paramod$835c3d4e1052824b85e41b069b2dce76edbd7f42$lut for cells of type $lut.
+Using template $paramod$054039f284ea4a3cc41a3eae71d574662bc3dd9a$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010100 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01100000 for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100010 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b$lut for cells of type $lut.
 Using template $paramod$73d3ad4079724b80535c506a091cf6296d7d3490$lut for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00100011 for cells of type $lut.
-Using template $paramod$f9813472aa48e533b3838c6f2316dc2e78c66111$lut for cells of type $lut.
-Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
 Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
 No more expansions possible.
-<suppressed ~1078 debug messages>
+<suppressed ~1023 debug messages>
 
 5.47. Executing OPT_LUT_INS pass (discard unused LUT inputs).
 Optimizing LUTs in SpinalSynth.
-  Optimizing lut $abc$8612$lut$aiger8611$997.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
-  Optimizing lut $abc$8612$lut$aiger8611$997.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 2)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8622.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8634.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 2)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 1)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 1)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 1)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 0)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8642.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8644.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8645.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8647.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8649.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8651.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8654.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8655.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8658.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8634.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8652.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8650.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8614.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8646.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8634.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8653.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8643.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8639.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8656.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8660.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8626.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8648.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8624.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
-  Optimizing lut $abc$8612$lut$aiger8611$863.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8621.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$926.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8617.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8615.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$685.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8659.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8628.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8630.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8641.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
-  Optimizing lut $abc$8612$lut$aiger8611$997.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
-Removed 0 unused cells and 412 unused wires.
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8535.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8535.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 1)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 1)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 1)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$1259.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$1233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$1207.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$1181.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$1165.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$1139.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8533.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8556.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8547.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$664.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$8514$lut$aiger8513$974.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8549.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$694.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8554.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$8514$lut$flatten\core_uartTop.\core_uartRxModule.$procmux$432.Y[6].genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8545.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$657.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8558.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8559.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8528.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8544.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8535.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8551.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8543.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8527.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8525.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8516.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8523.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8518.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8521.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8562.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $auto$abc9_ops.cc:1552:reintegrate$8532.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$914.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$8514$lut$aiger8513$863.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+Removed 0 unused cells and 406 unused wires.
 
 5.48. Executing AUTONAME pass.
-Renamed 1490 objects in module SpinalSynth (246 iterations).
-<suppressed ~1490 debug messages>
+Renamed 1528 objects in module SpinalSynth (256 iterations).
+<suppressed ~1528 debug messages>
 
 5.49. Executing HIERARCHY pass (managing design hierarchy).
 Attribute `top' found on module `SpinalSynth'. Setting top module to SpinalSynth.
@@ -2544,20 +2535,20 @@ Removed 0 unused modules.
 
         +----------Local Count, excluding submodules.
         | 
-      786 wires
-     1762 wire bits
-      786 public wires
-     1762 public wire bits
+      797 wires
+     1722 wire bits
+      797 public wires
+     1722 public wire bits
         7 ports
         7 port bits
        18 cells
        16   $scopeinfo
         2   EHXPLLL
-      855 submodules
-       42   CCU2C
-       62   L6MUX21
-      358   LUT4
-      135   PFUMX
+      881 submodules
+       35   CCU2C
+       74   L6MUX21
+      373   LUT4
+      141   PFUMX
       258   TRELLIS_FF
 
 === design hierarchy ===
@@ -2568,10 +2559,10 @@ Removed 0 unused modules.
 
         +----------Count including submodules.
         | 
-      786 wires
-     1762 wire bits
-      786 public wires
-     1762 public wire bits
+      797 wires
+     1722 wire bits
+      797 public wires
+     1722 public wire bits
         7 ports
         7 port bits
         - memories
@@ -2580,11 +2571,11 @@ Removed 0 unused modules.
        18 cells
        16   $scopeinfo
         2   EHXPLLL
-      855 submodules
-       42   CCU2C
-       62   L6MUX21
-      358   LUT4
-      135   PFUMX
+      881 submodules
+       35   CCU2C
+       74   L6MUX21
+      373   LUT4
+      141   PFUMX
       258   TRELLIS_FF
 
 5.51. Executing CHECK pass (checking for obvious problems).
@@ -2593,6 +2584,6 @@ Found and reported 0 problems.
 
 5.52. Executing JSON backend.
 
-End of script. Logfile hash: c4a7d7d244, CPU: user 1.43s system 0.06s, MEM: 51.74 MB peak
+End of script. Logfile hash: 4176bfc14f, CPU: user 1.40s system 0.05s, MEM: 50.84 MB peak
 Yosys 0.62+39 (git sha1 131911291, clang++ 18.1.8 -fPIC -O3)
-Time spent: 24% 27x read_verilog (0 sec), 17% 12x techmap (0 sec), ...
+Time spent: 25% 27x read_verilog (0 sec), 14% 12x techmap (0 sec), ...
