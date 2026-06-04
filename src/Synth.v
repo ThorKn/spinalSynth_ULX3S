@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.14.0    git head : 95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde
 // Component : Synth
-// Git hash  : 63e3a38995f2453dec1ba3de5acc16e60bdc9c5e
+// Git hash  : 7c14a61711fa7f3c6a75ce731b10975bd46995da
 
 `timescale 1ns/1ps
 
@@ -153,7 +153,7 @@ module I2STransmitter (
 );
 
   reg        [4:0]    _zz_cycleCounter_1;
-  wire       [16:0]   _zz_shiftReg;
+  wire       [32:0]   _zz_shiftReg;
   wire       [4:0]    patternTable_0;
   wire       [4:0]    patternTable_1;
   wire       [4:0]    patternTable_2;
@@ -165,13 +165,13 @@ module I2STransmitter (
   reg        [4:0]    cycleCounter;
   reg        [2:0]    patternIndex;
   reg        [4:0]    bitCounter;
-  reg        [15:0]   shiftReg;
+  reg        [31:0]   shiftReg;
   reg        [15:0]   sampleBuffer;
   reg                 active;
+  wire                when_I2STransmitter_l30;
   wire                when_I2STransmitter_l40;
   wire       [2:0]    _zz_cycleCounter;
-  wire       [4:0]    _zz_bitCounter;
-  wire                when_I2STransmitter_l52;
+  wire                when_I2STransmitter_l50;
 
   assign _zz_shiftReg = ({1'd0,shiftReg} <<< 1'd1);
   always @(*) begin
@@ -195,43 +195,43 @@ module I2STransmitter (
   assign patternTable_5 = 5'h0f;
   assign patternTable_6 = 5'h10;
   assign patternTable_7 = 5'h0f;
+  assign when_I2STransmitter_l30 = (! active);
   assign when_I2STransmitter_l40 = (cycleCounter == 5'h0);
   assign _zz_cycleCounter = (patternIndex + 3'b001);
-  assign _zz_bitCounter = (bitCounter + 5'h01);
-  assign when_I2STransmitter_l52 = ((_zz_bitCounter == 5'h0) || (_zz_bitCounter == 5'h10));
-  assign io_bclk = (active && (5'h08 <= cycleCounter));
+  assign when_I2STransmitter_l50 = (bitCounter == 5'h0);
+  assign io_bclk = (active && (cycleCounter < 5'h08));
   assign io_lrclk = ((! active) || (5'h10 <= bitCounter));
-  assign io_sdata = (active && shiftReg[15]);
+  assign io_sdata = (active && shiftReg[31]);
   always @(posedge io_clk24MHz or posedge io_reset) begin
     if(io_reset) begin
       cycleCounter <= 5'h0f;
       patternIndex <= 3'b000;
       bitCounter <= 5'h0;
-      shiftReg <= 16'h0;
+      shiftReg <= 32'h0;
       sampleBuffer <= 16'h0;
       active <= 1'b0;
     end else begin
       if(io_sampleIn_valid) begin
         sampleBuffer <= io_sampleIn_payload;
-        bitCounter <= 5'h0;
-        patternIndex <= 3'b000;
-        cycleCounter <= (patternTable_0 - 5'h01);
-        shiftReg <= io_sampleIn_payload;
-        active <= 1'b1;
-      end else begin
-        if(active) begin
-          if(when_I2STransmitter_l40) begin
-            patternIndex <= _zz_cycleCounter;
-            cycleCounter <= (_zz_cycleCounter_1 - 5'h01);
-            bitCounter <= _zz_bitCounter;
-            if(when_I2STransmitter_l52) begin
-              shiftReg <= sampleBuffer;
-            end else begin
-              shiftReg <= _zz_shiftReg[15:0];
-            end
+        if(when_I2STransmitter_l30) begin
+          active <= 1'b1;
+          bitCounter <= 5'h0;
+          patternIndex <= 3'b000;
+          cycleCounter <= (patternTable_0 - 5'h01);
+        end
+      end
+      if(active) begin
+        if(when_I2STransmitter_l40) begin
+          patternIndex <= _zz_cycleCounter;
+          cycleCounter <= (_zz_cycleCounter_1 - 5'h01);
+          bitCounter <= (bitCounter + 5'h01);
+          if(when_I2STransmitter_l50) begin
+            shiftReg <= {sampleBuffer,sampleBuffer};
           end else begin
-            cycleCounter <= (cycleCounter - 5'h01);
+            shiftReg <= _zz_shiftReg[31:0];
           end
+        end else begin
+          cycleCounter <= (cycleCounter - 5'h01);
         end
       end
     end
