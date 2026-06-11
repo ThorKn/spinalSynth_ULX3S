@@ -26,6 +26,6 @@ $(TOPMOD).config: $(TOPMOD).json
 		--textcfg $(TOPMOD).config
 
 $(TOPMOD).json: $(TOPMOD).v
-	yosys -l $(TOPMOD)_yosys.log -p "synth_ecp5 -top $(TOPMOD2) -json $(TOPMOD).json" $(TOPMOD).v UartTop.v pll_1.v pll_2.v
+	yosys -l $(TOPMOD)_yosys.log -p "synth_ecp5 -top $(TOPMOD2) -json $(TOPMOD).json" $(TOPMOD).v Synth.v pll_1.v pll_2.v
 
 
